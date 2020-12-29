@@ -14,7 +14,7 @@ export class RightBoxComponent implements OnInit {
   showResultsUrl = '';
   showComparisonUrl = '';
   details: Details[] = [];
-  displayedColumns: string[] = ['os', 'device', 'browser', 'date', 'resolution', 'thumb'];
+  displayedColumns: string[] = ['os', 'device', 'browser', 'resolution', 'date','thumb'];
   dataSource: Details[] = [];
   constructor(
     private screenshotsService: ScreenshotsService,
@@ -40,8 +40,8 @@ export class RightBoxComponent implements OnInit {
                os: results[i].os.name,
                device: results[i].os.device,
                browser: results[i].browser.name,
-               date: finishDate.toLocaleDateString('en-CA',{hour: '2-digit', minute:'2-digit'} ),
                resolution: results[i].resolution.name,
+               date: finishDate.toLocaleDateString('en-CA',{hour: '2-digit', minute:'2-digit'} ),
                thumb: results[i].thumbs.windowed,
                fullpage: results[i].images.fullpage
              } ;
