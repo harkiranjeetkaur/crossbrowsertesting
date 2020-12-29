@@ -17,10 +17,11 @@ export class RightBoxComponent implements OnInit {
   dataSource: Details[] = [];
   constructor(
     private screenshotsService: ScreenshotsService,
-    private activatedRoute: ActivatedRoute,
+    private activatedRoute: ActivatedRoute
   ) { }
 
-  ngOnInit(): void {
+  async ngOnInit(): Promise<void> {
+    await this.screenshotsService.loadData().toPromise();
     this.activatedRoute.params.subscribe((params) => {
       const item = this.screenshotsService.getItem(params.id);
       this.title = item?.page || '';

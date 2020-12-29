@@ -5,7 +5,7 @@ import {RightBoxComponent} from './right-box/right-box.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'item',
+    redirectTo: 'item/1', // redirect to Login by default
     pathMatch: 'full'
   },
   {
