@@ -28,8 +28,8 @@ export class RightBoxComponent implements OnInit {
       if (!!item) {
         this.screenshotsService.getTestResult(item).subscribe(r => {
            this.url = r.url;
-           this.showResultsUrl = r.versions[0].show_results_web_url;
-           this.showComparisonUrl = r.versions[0].show_comparisons_web_url;
+           this.showResultsUrl = r.versions[0].show_results_public_url;
+           this.showComparisonUrl = r.versions[0].show_comparisons_public_url;
            const results = r.versions[0].results;
           // tslint:disable-next-line:prefer-for-of
            for (let i = 0; i < results.length; i++) {
