@@ -1,0 +1,20 @@
+<div class="headerleft">
+  <span >
+    <mat-checkbox class="example-margin"
+                  [checked]="allComplete"
+                  [indeterminate]="someComplete()"
+                  (change)="setAll($event.checked)">
+    </mat-checkbox>
+  </span>
+  <button mat-raised-button color="primary" (click)="onRun()" >Run</button>
+</div>
+<div class="leftBoxContent">
+  <div *ngFor="let item of pageList" class="item">
+    <mat-checkbox [(ngModel)]="item.completed"
+                  (ngModelChange)="updateAllComplete()">
+    </mat-checkbox>
+    <a (click)="onSelectPage(item)" class="itemname">
+      <span class="name"> {{item.page}} </span>
+    </a>
+  </div>
+</div>

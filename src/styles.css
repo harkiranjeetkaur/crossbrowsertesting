@@ -1,0 +1,161 @@
+body {
+  background-color: black;
+  color: white;
+  font-family:'Roboto Condensed', Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.label {
+  margin-right: 5px;
+}
+
+.header {
+  text-align: center;
+  text-transform: uppercase;
+  text-weight: bold;
+  /*height: 50px;*/
+  background-color: rgba(12, 12, 12, 0.8);
+}
+.header>span {
+  line-height: 50px;
+}
+
+left-box {
+  top: 0;
+  left: 0;
+  border-right: 1px solid #747474;
+}
+
+#right-box {
+  right: 0;
+  border-left: 1px solid #747474;
+  /*background: url(https://wallpapercave.com/wp/wp1991996.jpg);*/
+}
+
+left-box, #right-box {
+  position:absolute !important;
+  height:100%;
+  top:0;
+  bottom: 0;
+  z-index: 11;
+  -webkit-background-size:cover;
+  -moz-background-size:cover;
+  -o-background-size:cover;
+  background-size:cover;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.spade-watermark.jpg', sizingMethod='scale');
+  -ms-filter:"progid:DXImageTransform.Microsoft.AlphaImageLoader(src='spade-watermark.jpg', sizingMethod='scale')";
+  background-color: black;
+  background-repeat:no-repeat;
+  background-position:bottom center;
+  background-origin:border-box;
+}
+
+.table {
+  width:100%;
+  background: rgba(14, 14, 14, 0.8) !important;
+}
+.table th, .table td.mat-cell {
+  padding-top: 12px !important;
+  font-weight: 300 !important;
+  vertical-align: middle;
+}
+
+.card {
+  background-color: rgba(14, 14, 14, 0.8)
+}
+.card div {
+  margin-top: 5px;
+}
+.img {
+  height: 10%;
+  weight: 10%
+}
+
+.leftBoxContent, .rightBoxContent {
+  overflow: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  margin-top: 50px;
+  border-top: 1px solid #747474;
+}
+
+.headerleft {
+  position: absolute;
+  left: 15px;
+  margin-top: 10px;
+}
+
+.headerleft button {
+  margin-left: 20px;
+  background-color: #003b0f;
+  color: white;
+}
+
+.headline {
+  background: linear-gradient(to bottom, #fefefe 0%,#f1f1f1 23%,#c1c1c1 77%,#b4b4b4 100%);
+  color: #000;
+  height: 30px;
+  font: inherit;
+  line-height: 30px;
+  padding: 5px 15px;
+  text-align: left;
+}
+
+.item {
+  background-color: rgba(14, 14, 14, 0.8);
+  padding: 8px 15px;
+  margin: 0 0 1px 0;
+  color: #FFF;
+  font-size: 1em;
+}
+
+left-box .item {
+  font-weight: bold;
+  border-bottom: 1px solid #1f1f1f;
+}
+
+a.item {
+  display: block;
+}
+
+.items .item:after, .items .item:before {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.items, .item>.button {
+  max-width: 500px;
+  margin: auto;
+  width: 100%;
+}
+
+.item .button {
+  padding: 7px 1px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1.5em;
+  width: 100%;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+@-ms-viewport {width: device-width;}
+/* --- Reset --- */
+html, body, div, span, object, iframe, h1, h2, h3, h4, p, a, img, center, ol, ul, li, form, label, table, tbody, tfoot, thead, tr, th, td, form, input, button, hr {margin: 0; padding: 0; border: 0; font: inherit; vertical-align: baseline; -webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+body{padding: 0; border: 0; height:100%}
+html {overflow-x:hidden;}
+
+
+/* --- Grid Item --- */
+.g01, .g02, .g03, .g04, .g05, .g06, .g07, .g08, .g09, .g10, .g11, .g12, .g13, .g14, .g15, .g16, .g17, .g18, .g19, .g20, .g21, .g22, .g23, .g24 {float:left; text-align:left; width:100%;}
+.g24 {width: 100%;} .g23 {width: 95.83333333333334%;} .g22 {width: 91.66666666666666%;} .g21 {width: 87.5%;} .g20 {width: 83.33333333333334%;} .g19 {width: 79.16666666666666%;} .g18 {width: 75%;} .g17 {width: 70.83333333333334%;} .g16 {width: 66.66666666666666%;} .g15 {width: 62.5%;} .g14 {width: 58.333333333333336%;} .g13 {width: 54.166666666666664%;} .g12 {width: 50%;} .g11 {width: 45.83333333333333%;} .g10 {width: 41.66666666666667%;} .g09 {width: 37.5%;} .g08 {width: 33.33333333333333%;} .g07 {width: 29.166666666666668%;} .g06 {width: 25%;} .g05 {width: 20.833333333333336%;} .g04 {width: 16.666666666666664%;} .g03 {width: 12.5%;} .g02 {width: 8.333333333333332%;} .g01 {width: 4.166666666666666%;}
