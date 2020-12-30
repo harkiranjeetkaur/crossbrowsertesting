@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Item, ScreenshotsService} from '../service/screenshots.service';
 import {Router} from '@angular/router';
+import {AuthService} from '../service/auth.service';
 
 @Component({
   selector: 'app-left-box',
@@ -13,7 +14,8 @@ export class LeftBoxComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private screenshotsService: ScreenshotsService
+    private screenshotsService: ScreenshotsService,
+    private authService: AuthService
   ) {}
 
   ngOnInit(): void {
@@ -26,7 +28,7 @@ export class LeftBoxComponent implements OnInit {
       });
   }
 
-  updateAllComplete() {
+  updateAllComplete(): void {
     this.allComplete = this.pageList != null && this.pageList.every(t => t.completed);
   }
 
@@ -37,20 +39,24 @@ export class LeftBoxComponent implements OnInit {
     return this.pageList.filter(t => t.completed).length > 0 && !this.allComplete;
   }
 
-  setAll(completed: boolean) {
+  setAll(completed: boolean): void {
     this.allComplete = completed;
     this.pageList.forEach(t => t.completed = completed);
   }
 
-  onSelectPage(item: Item) {
-    this.router.navigate([`/item/${item.id}`]);
+  onSelectPage(item: Item): void {
+    this.router.navigate([`/item/${item.id}`]).then();
   }
 
-  onRun() {
+  onRun(): void {
     const checkedPageList = this.pageList.filter(p => p.completed);
 
     checkedPageList.forEach(item => {
       this.screenshotsService.runScreenshotTest(item);
     });
+  }
+
+  logout(): void {
+    this.authService.logout();
   }
 }

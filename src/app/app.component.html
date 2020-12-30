@@ -1,4 +1,5 @@
-<app-left-box class="gItem g07"></app-left-box>
-<div id="right-box" class="gItem g17" >
+<app-login *ngIf="!authService.loggedIn"></app-login>
+<app-left-box *ngIf="authService.loggedIn" class="gItem g07"></app-left-box>
+<div *ngIf="authService.loggedIn" class="gItem g17" id="right-box">
   <router-outlet></router-outlet>
 </div>
