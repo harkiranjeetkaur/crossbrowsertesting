@@ -36,7 +36,6 @@ left-box {
 #right-box {
   right: 0;
   border-left: 1px solid #747474;
-  /*background: url(https://wallpapercave.com/wp/wp1991996.jpg);*/
 }
 
 left-box, #right-box {
@@ -60,6 +59,9 @@ left-box, #right-box {
 .table {
   width:100%;
   background: rgba(14, 14, 14, 0.8) !important;
+}
+.table th {
+  font-size: 1em;
 }
 .table th, .table td.mat-cell {
   padding-top: 12px !important;
